@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Game of Modes</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+<body>
+  <header>
+    <span>Logo</span>
+    <h1>Welcome to the Game of Modes project</h1>
+  </header>
+
+  <main>
+    <section id="text">
+      <h2>Text</h2>
+      <p>This is displaying text on a website using html and css</p>
+    </section>
+    <section id="photo">
+        <h2>Photo</h2>
+        <img src="./assets/camp-nou.png" alt="A photo of the Spotify Camp Nou stadium" />
+    </section>
+    <section id="audio">
+        <h2>Audio</h2>
+        <audio src="./assets/running-night-audio.mp3"></audio>
+        <p>Music by <a href="https://pixabay.com/users/alex_makemusic-24186663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Oleksandr Savochka</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Pixabay</a></p>
+    </section>
+    <section id="video">
+        <h2>Video</h2>
+        <video src=""></video>
+
+    </section>
+
+    <section id="map">
+      <h2>Interactive map</h2>
+      <div id="interactive-map" aria-label="Interactive map"></div>
+    </section>
+    <section>
+
+    </section>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const center = [41.380729, 2.122561]; // Coordinates for Barcelonas fotball stadium
+    const map = L.map('interactive-map', { center, zoom: 17, scrollWheelZoom: true});
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  </script>
+</body> 
+</html>
