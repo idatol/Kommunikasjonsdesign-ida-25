@@ -12,8 +12,7 @@
 </head>
 <body>
   <header>
-    <span>Logo</span>
-    <h1>Welcome to the Game of Modes project</h1>
+    <h1>The Game of Modes project</h1>
   </header>
 
   <main>
@@ -23,20 +22,26 @@
     </section>
     <section id="photo">
         <h2>Photo</h2>
+        <p>A projection of the new spotify camp nou stadium</p>
         <img src="./assets/camp-nou.png" alt="A photo of the Spotify Camp Nou stadium" />
     </section>
     <section id="audio">
         <h2>Audio</h2>
-        <audio src="./assets/running-night-audio.mp3"></audio>
+        <audio controls preload="none">
+            <source src="./assets/running-night-audio.mp3" type="audio/mpeg">
+        </audio>
         <p>Music by <a href="https://pixabay.com/users/alex_makemusic-24186663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Oleksandr Savochka</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Pixabay</a></p>
     </section>
     <section id="video">
         <h2>Video</h2>
-        <video src="./assets/video.mp4"></video>
+        <video controls preload="metadata" poster="./assets/video-poster.jpg">
+            <source src="./assets/video.mp4" type="video/mp4">
+        </video>
         <p>Video by <a href="https://pixabay.com/users/thedog777-1625863/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Kevin Krämer</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Pixabay</a></p>
     </section>
     <section id="map">
       <h2>Interactive map</h2>
+      <p>This is an interactive map showing the locations of the Spotify Camp Nou stadium.</p>
       <div id="interactive-map" aria-label="Interactive map"></div>
     </section>
     <section id="timeline">
@@ -62,7 +67,12 @@
     </section>
     <section id="infoviz">
         <h2>Infoviz</h2>
-        <img src="#" alt="An infographic showing Lionel Messi's goal statistics for each season at Barcelona" />
+        <figure>
+            <img src="./assets/messi-stats.png" alt="An infographic showing Lionel Messi's goal statistics at Barcelona" />
+            <figcaption>
+                Source: <a href="https://www.facebook.com/GOAL/posts/10160190634833598/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </figcaption>
+        </figure>
     </section>
     <section id="data">
         <h2>Data</h2>
