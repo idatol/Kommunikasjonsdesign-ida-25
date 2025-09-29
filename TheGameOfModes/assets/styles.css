@@ -25,10 +25,26 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#photo img, #video video, #infoviz img, #chart img, #interactive-map{
+#photo img, #video video, #infoviz img, #chart img{
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    border: 2px solid var(--blue);
 }
 
-#interactive-map { height: 360px; width: 100%; }
+#interactive-map { 
+    height: 360px; 
+    width: 100%; 
+    border-radius: 8px;
+    border: 2px solid var(--blue);
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#table th, #table td {
+    padding: 10px;
+    border: 1px solid var(--red);
+}
