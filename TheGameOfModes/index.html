@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Game of Modes</title>
   <link rel="stylesheet" href="./assets/styles.css" />
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
+  <!-- Leaflet CSS for interactive map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
   <header>
@@ -16,165 +14,319 @@
   </header>
 
   <main>
+    <!-- TEXT -->
     <section id="text">
       <h2>Text</h2>
-      <p>
-        I really like football and my favorite team is FC Barcelona. 
-        I have watched them play since i was young and my favorite player is Lionel Messi.
-        He is a club lengend and considerd bu many to be the best player of all time.
-        For me though, he just plays such unbelivable amazing fotball, with pressition and skill that is unmatched. <br>
-        This whole project is for these reasons going to have content mostly related to FC Barcelona and Lionel Messi. <br>
-        NOTE: I now Marius dont like centerd text and that is the reason most of the text and headlines are left aligned.
-    </p>
+      <article class="subarticle-elements" aria-labelledby="text-elements">
+        <blockquote>
+          "Barcelona, perhaps rising from their ruins again"
+        </blockquote>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="text-implementation">
+        <h3>Implementation</h3>
+        <p>
+          This mode is implemented with the <code>&lt;blockquote&gt;</code> element,
+          which semantically highlights quotations or key statements.
+          An alternative would be to use regular <code>&lt;p&gt;</code> tag for default text.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="text-effect">
+        <h3>Effect on the reader</h3>
+        <p>
+          Using a blockquote draws the eye of the reader and signals significant or important information,
+          giving the text more weight than a normal text paragraph.
+          It can create a pause in the normal reading flow which can make the reader
+          reflect more deeply on the words being emphasized.
+        </p>
+      </article>
     </section>
+
+    <!-- PHOTO -->
     <section id="photo">
-        <h2>Photo</h2>
-        <p>A projection of the new spotify camp nou stadium</p>
-        <img src="./assets/camp-nou.png" alt="A photo of the Spotify Camp Nou stadium" />
+      <h2>Photo</h2>
+      <article class="subarticle-elements" aria-labelledby="photo-elements">
+        <figure>
+          <img src="./assets/camp-nou.png" alt="The Spotify Camp Nou stadium under redevelopment" />
+          <figcaption>Source: FC Barcelona Press Release (2023)</figcaption>
+        </figure>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="photo-implementation">
+        <h3>Implementation</h3>
+        <p>
+          This mode is implemented with a <code>&lt;figure&gt;</code> element
+          containing an <code>&lt;img&gt;</code> and a <code>&lt;figcaption&gt;</code>.
+          This semantically links the image with its caption which in this case is used to provide the source information.
+          Alternatives include just using a simple <code>&lt;img&gt;</code> tag or presenting
+          multiple images in a gallery or slideshow component.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="photo-effect">
+        <h3>Effect on the reader</h3>
+        <p>
+          Images are processed instantly and evoke emotions faster than text.
+          They boost attention, increase credibility, and make information more memorable.
+        </p>
+      </article>
     </section>
+
+    <!-- AUDIO -->
     <section id="audio">
-        <h2>Audio</h2>
+      <h2>Audio</h2>
+      <article class="subarticle-elements" aria-labelledby="audio-elements">
         <audio controls preload="none">
-            <source src="./assets/running-night-audio.mp3" type="audio/mpeg">
+          <source src="./assets/running-night-audio.mp3" type="audio/mpeg" />
         </audio>
-        <p>Music by <a href="https://pixabay.com/users/alex_makemusic-24186663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Oleksandr Savochka</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Pixabay</a></p>
+        <p>
+          Music by
+          <a href="https://pixabay.com/users/alex_makemusic-24186663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Oleksandr Savochka</a>
+          from
+          <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Pixabay</a>
+        </p>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="audio-implementation">
+        <h3>Implementation</h3>
+        <p>
+          Implemented with the <code>&lt;audio&gt;</code> tag. Alternatives: embedded players like Spotify, YouTube, or Apple Music.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="audio-effect">
+        <h3>Effect on the reader</h3>
+        <p>
+          Sound enhances how the reader perceives and experiences the content. Background audio can set the right atmosphere and help create a good environment.
+        </p>
+      </article>
     </section>
+
+    <!-- VIDEO -->
     <section id="video">
-        <h2>Video</h2>
+      <h2>Video</h2>
+      <article class="subarticle-elements" aria-labelledby="video-elements">
         <video controls preload="metadata" poster="./assets/video-poster.jpg" autoplay muted loop>
-            <source src="./assets/video.mp4" type="video/mp4">
+          <source src="./assets/video.mp4" type="video/mp4" />
         </video>
-        <p>Video by <a href="https://pixabay.com/users/thedog777-1625863/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Kevin Krämer</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Pixabay</a></p>
+        <p>
+          Video by
+          <a href="https://pixabay.com/users/thedog777-1625863/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Kevin Krämer</a>
+          from
+          <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Pixabay</a>
+        </p>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="video-implementation">
+        <h3>Implementation</h3>
+        <p>
+          Implemented with the HTML <code>&lt;video&gt;</code> tag using a local MP4 file.
+          Alternatives: embed from YouTube/Vimeo with an <code>&lt;iframe&gt;</code> or custom video players like Video.js or Plyr.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="video-effect">
+        <h3>Effect on the reader</h3>
+        <p>
+          Video engages the reader through movement, making the story feel more alive and makes it easier to remember.
+          Motion draws the attention of the reader and keeps them interested in a way static images can´t.
+        </p>
+      </article>
     </section>
+
+    <!-- MAP -->
     <section id="map">
       <h2>Interactive map</h2>
-      <p>This is an interactive map showing the locations of the Spotify Camp Nou stadium.</p>
-      <div id="interactive-map" aria-label="Interactive map"></div>
+      <article class="subarticle-elements" aria-labelledby="map-elements">
+        <iframe
+          class="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.19931841653!2d2.120239776234241!3d41.38089667130487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2e2e2d269ad%3A0x326e49f7b7b82d59!2sSpotify%20Camp%20Nou!5e0!3m2!1sen!2sno!4v1696086920000!5m2!1sen!2sno"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="map-implementation">
+        <h3>Implementation</h3>
+        <p>
+          This mode is implemented with a simple <code>&lt;iframe&gt;</code> embed from Google Maps.
+          Alternatives: Google Maps JavaScript API for more customization,
+          or libraries like Leaflet or Mapbox for more control.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="map-effect">
+        <h3>Effect on the reader</h3>
+        <p>
+          An interactive map captures attention by combining visual information with user interaction.
+          It invites exploration and helps readers connect information with a real location,
+          making it more engaging and memorable.
+        </p>
+      </article>
     </section>
+
+    <!-- TIMELINE -->
     <section id="timeline">
-        <h2>Timeline</h2>
+      <h2>Timeline</h2>
+      <article class="subarticle-elements" aria-labelledby="timeline-elements">
         <ul>
-            <li>
-                <h3>Messi debuted for the Barcelona first team</h3>
-                <time datetime="2004-11-16">November 16 2004</time>
-            </li>
-            <li>
-                <h3>His first goal for the club</h3>
-                <time datetime="2005-05-01">May 1 2005</time>
-            </li>
-            <li>
-                <h3>First Ballon d'Or win</h3>
-                <time datetime="2009-12-01">December 1 2009</time>
-            </li>
-            <li>
-                <h3>Leaving Barcelona</h3>
-                <time datetime="2021-08-05">August 5 2021</time>
-            </li>
+          <li>
+            <h3>Messi debuted for the Barcelona first team</h3>
+            <time datetime="2004-11-16">November 16 2004</time>
+          </li>
+          <li>
+            <h3>His first goal for the club</h3>
+            <time datetime="2005-05-01">May 1 2005</time>
+          </li>
+          <li>
+            <h3>First Ballon d'Or win</h3>
+            <time datetime="2009-12-01">December 1 2009</time>
+          </li>
+          <li>
+            <h3>Leaving Barcelona</h3>
+            <time datetime="2021-08-05">August 5 2021</time>
+          </li>
         </ul>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="timeline-implementation">
+        <h3>Implementation</h3>
+        <p>
+          Structured as a semantic list styled with CSS to form a visual timeline. Alternatives: use TimelineJS or Vis.js for interactive timeline
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="timeline-effect">
+        <h3>Effect on the reader</h3>
+        <p>
+          Timelines easily simplify information and present it in a clear and easy-to-read context.
+          Visual anchors (dots/lines) help readers remember specific times or key dates important to the story.
+        </p>
+      </article>
     </section>
+
+    <!-- INFOVIZ -->
     <section id="infoviz">
-        <h2>Infoviz</h2>
-        <figure>
-            <img src="./assets/messi-stats.png" alt="An infographic showing Lionel Messi's goal statistics at Barcelona" />
-            <figcaption>
-                Source: <a href="https://www.facebook.com/GOAL/posts/10160190634833598/" target="_blank" rel="noopener noreferrer">Facebook</a>
-            </figcaption>
+      <h2>Infoviz</h2>
+      <article class="subarticle-elements" aria-labelledby="infoviz-elements">
+        <figure class="infoviz-data" role="group" aria-labelledby="infoviz-caption">
+          <!-- Final QuickChart src generated with ChatGPT after my initial config failed due to multiple errors. -->
+          <img
+            src="https://quickchart.io/chart?c=%7B%22type%22:%22pie%22,%22data%22:%7B%22labels%22:%5B%22La%20Liga%22,%22UCL%22,%22Copa%20del%20Rey%22,%22Other%22%5D,%22datasets%22:%5B%7B%22data%22:%5B45,30,18,7%5D,%22backgroundColor%22:%5B%22%23004d98%22,%22%23a50044%22,%22%23fdb913%22,%22%232e3440%22%5D%7D%5D%7D%7D"
+            alt="Goals by competition" />
+          <figcaption id="infoviz-caption">
+            Distribution of goals by competition
+          </figcaption>
+
+          <div class="infographic-stats" aria-hidden="true">
+            <div class="stat-item">
+              <span class="stat-value">45%</span>
+              <span class="stat-label">La Liga</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">30%</span>
+              <span class="stat-label">UCL</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">18%</span>
+              <span class="stat-label">Copa del Rey</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">7%</span>
+              <span class="stat-label">Other</span>
+            </div>
+          </div>
         </figure>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="infoviz-implementation">
+        <h3 id="infoviz-implementation">Implementation</h3>
+        <p>
+          This visualization is a QuickChart doughnut rendered via an <code>&lt;img&gt;</code> <code>src</code>
+          wrapped in a semantic <code>&lt;figure&gt;</code>/<code>&lt;figcaption&gt;</code>.
+          The palette matches the site theme, and the <code>alt</code> text summarizes the content for good accessibility.
+          Alternatives: an interactive Chart.js/D3 version (tooltips/filters) or an edited static image.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="infoviz-effect">
+        <h3 id="infoviz-effect">Effect on the reader</h3>
+        <p>
+          The infovis turns numbers and statistics into easy-to-read shapes and colors.
+          It makes the information clear at a glance and anchors the message with a clear caption.
+        </p>
+      </article>
     </section>
+
+    <!-- DATA TABLE -->
     <section id="data">
-        <h2>Data</h2>
+      <h2>Data</h2>
+      <article class="subarticle-elements" aria-labelledby="data-elements">
         <table id="table">
-            <tr>
-                <th>Season</th>
-                <th>Goals</th>
-            </tr>
-            <tr>
-                <td>2004-05</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>2005-06</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>2006-07</td>
-                <td>14</td>
-            </tr>
-            <tr>
-                <td>2007-08</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>2008-09</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>2009-10</td>
-                <td>34</td>
-            </tr>
-            <tr>
-                <td>2010-11</td>
-                <td>31</td>
-            </tr>
-            <tr>
-                <td>2011-12</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>2012-13</td>
-                <td>46</td>
-            </tr>
-            <tr>
-                <td>2013-14</td>
-                <td>28</td>
-            </tr>
-            <tr>
-                <td>2014-15</td>
-                <td>43</td>
-            </tr>
-            <tr>
-                <td>2015-16</td>
-                <td>26</td>
-            </tr>
-            <tr>
-                <td>2016-17</td>
-                <td>37</td>
-            </tr>
-            <tr>
-                <td>2017-18</td>
-                <td>34</td>
-            </tr>
-            <tr>
-                <td>2018-19</td>
-                <td>36</td>
-            </tr>
-            <tr>
-                <td>2019-20</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>2020-21</td>
-                <td>30</td>
-            </tr>
+          <tr>
+            <th>Season</th>
+            <th>Goals</th>
+          </tr>
+          <tr><td>2004-05</td><td>1</td></tr>
+          <tr><td>2005-06</td><td>6</td></tr>
+          <tr><td>2006-07</td><td>14</td></tr>
+          <tr><td>2007-08</td><td>10</td></tr>
+          <tr><td>2008-09</td><td>23</td></tr>
+          <tr><td>2009-10</td><td>34</td></tr>
+          <tr><td>2010-11</td><td>31</td></tr>
+          <tr><td>2011-12</td><td>50</td></tr>
+          <tr><td>2012-13</td><td>46</td></tr>
+          <tr><td>2013-14</td><td>28</td></tr>
+          <tr><td>2014-15</td><td>43</td></tr>
+          <tr><td>2015-16</td><td>26</td></tr>
+          <tr><td>2016-17</td><td>37</td></tr>
+          <tr><td>2017-18</td><td>34</td></tr>
+          <tr><td>2018-19</td><td>36</td></tr>
+          <tr><td>2019-20</td><td>25</td></tr>
+          <tr><td>2020-21</td><td>30</td></tr>
         </table>
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="data-implementation">
+        <h3 id="data-implementation">Implementation</h3>
+        <p>
+          Presented as a semantic HTML <code>&lt;table&gt;</code> with clear headers for each column.
+          Alternative: generating rows from JSON with script.
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="data-effect">
+        <h3 id="data-effect">Effect on the reader</h3>
+        <p>
+          Tables support precise lookup and side-by-side comparison.
+          Clear headers and alignments makes long lists easier to read and understand.
+        </p>
+      </article>
     </section>
+
+    <!-- CHART -->
     <section id="chart">
-        <h2>Chart</h2>
+      <h2>Chart</h2>
+      <article class="subarticle-elements" aria-labelledby="chart-elements">
         <img src="./assets/chart.png" alt="Excel chart showing Lionel Messi's goal statistics for each season at Barcelona" />
+      </article>
+
+      <article class="subarticle-implementation" aria-labelledby="chart-implementation">
+        <h3 id="chart-implementation">Implementation</h3>
+        <p>
+          Inserted as a static PNG exported from Excel. Alternative: interactive chart with Chart.js or Google Charts
+        </p>
+      </article>
+
+      <article class="subarticle-effect" aria-labelledby="chart-effect">
+        <h3 id="chart-effect">Effect on the reader</h3>
+        <p>
+          Charts make trends and outliers visible at a glance, making quick season-to-season comparisons possible and providing faster insight than just the raw numbers.
+        </p>
+      </article>
     </section>
   </main>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    const center = [41.380729, 2.122561]; // Coordinates for Barcelonas fotball stadium
-    const map = L.map('interactive-map', { center, zoom: 17, scrollWheelZoom: true});
-
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-    }).addTo(map);
-  </script>
-</body> 
+</body>
 </html>
