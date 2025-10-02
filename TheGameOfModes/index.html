@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Game of Modes</title>
   <link rel="stylesheet" href="./assets/styles.css" />
-  <!-- Leaflet CSS for interactive map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
   <header>
@@ -17,13 +15,13 @@
     <!-- TEXT -->
     <section id="text">
       <h2>Text</h2>
-      <article class="subarticle-elements" aria-labelledby="text-elements">
+      <article class="article1" aria-labelledby="text-elements">
         <blockquote>
           "Barcelona, perhaps rising from their ruins again"
         </blockquote>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="text-implementation">
+      <article class="article2" aria-labelledby="text-implementation">
         <h3>Implementation</h3>
         <p>
           This mode is implemented with the <code>&lt;blockquote&gt;</code> element,
@@ -32,7 +30,7 @@
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="text-effect">
+      <article class="article3" aria-labelledby="text-effect">
         <h3>Effect on the reader</h3>
         <p>
           Using a blockquote draws the eye of the reader and signals significant or important information,
@@ -46,16 +44,16 @@
     <!-- PHOTO -->
     <section id="photo">
       <h2>Photo</h2>
-      <article class="subarticle-elements" aria-labelledby="photo-elements">
+      <article class="article1" aria-labelledby="photo-elements">
         <figure>
-            <img src="./assets/camp-nou.png" alt="The Spotify Camp Nou stadium under redevelopment" />
-            <figcaption>
-                Source: <a href="https://www.fcbarcelona.com/en/news/4202134/barca-hospitality-launches-vip-ring-seats-the-last-premium-seats-to-be-unveiled-for-the-future-spotify-camp-nou">FC Barcelona Press Release (2023)</a>
-            </figcaption>
+          <img src="./assets/camp-nou.png" alt="The Spotify Camp Nou stadium under redevelopment" loading="lazy"/>
+          <figcaption>
+              Source: <a href="https://www.fcbarcelona.com/en/news/4202134/barca-hospitality-launches-vip-ring-seats-the-last-premium-seats-to-be-unveiled-for-the-future-spotify-camp-nou">FC Barcelona Press Release (2023)</a>
+          </figcaption>
         </figure>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="photo-implementation">
+      <article class="article2" aria-labelledby="photo-implementation">
         <h3>Implementation</h3>
         <p>
           This mode is implemented with a <code>&lt;figure&gt;</code> element
@@ -66,7 +64,7 @@
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="photo-effect">
+      <article class="article3" aria-labelledby="photo-effect">
         <h3>Effect on the reader</h3>
         <p>
           Images are processed instantly and evoke emotions faster than text.
@@ -78,26 +76,24 @@
     <!-- AUDIO -->
     <section id="audio">
       <h2>Audio</h2>
-      <article class="subarticle-elements" aria-labelledby="audio-elements">
+      <article class="article1" aria-labelledby="audio-elements">
         <audio controls preload="none">
           <source src="./assets/running-night-audio.mp3" type="audio/mpeg" />
         </audio>
         <p>
-          Music by
-          <a href="https://pixabay.com/users/alex_makemusic-24186663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Oleksandr Savochka</a>
-          from
-          <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Pixabay</a>
+          Music by <a href="https://pixabay.com/users/alex_makemusic-24186663/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Oleksandr Savochka</a>
+          from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=393139">Pixabay</a>
         </p>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="audio-implementation">
+      <article class="article2" aria-labelledby="audio-implementation">
         <h3>Implementation</h3>
         <p>
           Implemented with the <code>&lt;audio&gt;</code> tag. Alternatives: embedded players like Spotify, YouTube, or Apple Music.
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="audio-effect">
+      <article class="article3" aria-labelledby="audio-effect">
         <h3>Effect on the reader</h3>
         <p>
           Sound enhances how the reader perceives and experiences the content. Background audio can set the right atmosphere and help create a good environment.
@@ -108,19 +104,17 @@
     <!-- VIDEO -->
     <section id="video">
       <h2>Video</h2>
-      <article class="subarticle-elements" aria-labelledby="video-elements">
+      <article class="article1" aria-labelledby="video-elements">
         <video controls preload="metadata" poster="./assets/video-poster.jpg" autoplay muted loop>
           <source src="./assets/video.mp4" type="video/mp4" />
         </video>
         <p>
-          Video by
-          <a href="https://pixabay.com/users/thedog777-1625863/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Kevin Krämer</a>
-          from
-          <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Pixabay</a>
+          Video by <a href="https://pixabay.com/users/thedog777-1625863/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Kevin Krämer</a>
+          from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=246391">Pixabay</a>
         </p>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="video-implementation">
+      <article class="article2" aria-labelledby="video-implementation">
         <h3>Implementation</h3>
         <p>
           Implemented with the HTML <code>&lt;video&gt;</code> tag using a local MP4 file.
@@ -128,7 +122,7 @@
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="video-effect">
+      <article class="article3" aria-labelledby="video-effect">
         <h3>Effect on the reader</h3>
         <p>
           Video engages the reader through movement, making the story feel more alive and makes it easier to remember.
@@ -140,17 +134,15 @@
     <!-- MAP -->
     <section id="map">
       <h2>Interactive map</h2>
-      <article class="subarticle-elements" aria-labelledby="map-elements">
+      <article class="article1" aria-labelledby="map-elements">
         <iframe
           class="map-frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.19931841653!2d2.120239776234241!3d41.38089667130487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2e2e2d269ad%3A0x326e49f7b7b82d59!2sSpotify%20Camp%20Nou!5e0!3m2!1sen!2sno!4v1696086920000!5m2!1sen!2sno"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="map-implementation">
+      <article class="article2" aria-labelledby="map-implementation">
         <h3>Implementation</h3>
         <p>
           This mode is implemented with a simple <code>&lt;iframe&gt;</code> embed from Google Maps.
@@ -159,7 +151,7 @@
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="map-effect">
+      <article class="article3" aria-labelledby="map-effect">
         <h3>Effect on the reader</h3>
         <p>
           An interactive map captures attention by combining visual information with user interaction.
@@ -172,7 +164,7 @@
     <!-- TIMELINE -->
     <section id="timeline">
       <h2>Timeline</h2>
-      <article class="subarticle-elements" aria-labelledby="timeline-elements">
+      <article class="article1" aria-labelledby="timeline-elements">
         <ul>
           <li>
             <h3>Messi debuted for the Barcelona first team</h3>
@@ -193,14 +185,14 @@
         </ul>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="timeline-implementation">
+      <article class="article2" aria-labelledby="timeline-implementation">
         <h3>Implementation</h3>
         <p>
           Structured as a semantic list styled with CSS to form a visual timeline. Alternatives: use TimelineJS or Vis.js for interactive timeline
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="timeline-effect">
+      <article class="article3" aria-labelledby="timeline-effect">
         <h3>Effect on the reader</h3>
         <p>
           Timelines easily simplify information and present it in a clear and easy-to-read context.
@@ -212,7 +204,7 @@
     <!-- INFOVIZ -->
     <section id="infoviz">
       <h2>Infoviz</h2>
-      <article class="subarticle-elements" aria-labelledby="infoviz-elements">
+      <article class="article1" aria-labelledby="infoviz-elements">
         <figure class="infoviz-data" role="group" aria-labelledby="infoviz-caption">
           <!-- Final QuickChart src generated with ChatGPT after my initial config failed due to multiple errors. -->
           <img id="infoviz-chart"
@@ -243,7 +235,7 @@
         </figure>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="infoviz-implementation">
+      <article class="article2" aria-labelledby="infoviz-implementation">
         <h3 id="infoviz-implementation">Implementation</h3>
         <p>
           This visualization is a QuickChart doughnut rendered via an <code>&lt;img&gt;</code> <code>src</code>
@@ -253,7 +245,7 @@
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="infoviz-effect">
+      <article class="article3" aria-labelledby="infoviz-effect">
         <h3 id="infoviz-effect">Effect on the reader</h3>
         <p>
           The infovis turns numbers and statistics into easy-to-read shapes and colors.
@@ -265,7 +257,7 @@
     <!-- DATA TABLE -->
     <section id="data">
       <h2>Data</h2>
-      <article class="subarticle-elements" aria-labelledby="data-elements">
+      <article class="article1" aria-labelledby="data-elements">
         <table id="table">
           <tr>
             <th>Season</th>
@@ -289,10 +281,10 @@
           <tr><td>2019-20</td><td>25</td></tr>
           <tr><td>2020-21</td><td>30</td></tr>
         </table>
-        <Source>Source: <a href="https://en.wikipedia.org/wiki/Lionel_Messi#Career_statistics">Wikipedia - Lionel Messi Career statistics</a></Source>
+        <p>Source: <a href="https://en.wikipedia.org/wiki/Lionel_Messi#Career_statistics">Wikipedia - Lionel Messi Career statistics</a></p>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="data-implementation">
+      <article class="article2" aria-labelledby="data-implementation">
         <h3 id="data-implementation">Implementation</h3>
         <p>
           Presented as a semantic HTML <code>&lt;table&gt;</code> with clear headers for each column.
@@ -300,7 +292,7 @@
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="data-effect">
+      <article class="article3" aria-labelledby="data-effect">
         <h3 id="data-effect">Effect on the reader</h3>
         <p>
           Tables support precise lookup and side-by-side comparison.
@@ -312,19 +304,19 @@
     <!-- CHART -->
     <section id="chart">
       <h2>Chart</h2>
-      <article class="subarticle-elements" aria-labelledby="chart-elements">
+      <article class="article1" aria-labelledby="chart-elements">
         <img src="./assets/chart.png" alt="Excel chart showing Lionel Messi's goal statistics for each season at Barcelona" />
         <Source>Source: <a href="https://en.wikipedia.org/wiki/Lionel_Messi#Career_statistics">Wikipedia - Lionel Messi Career statistics</a></Source>
       </article>
 
-      <article class="subarticle-implementation" aria-labelledby="chart-implementation">
+      <article class="article2" aria-labelledby="chart-implementation">
         <h3 id="chart-implementation">Implementation</h3>
         <p>
           Inserted as a static PNG exported from Excel. Alternative: interactive chart with Chart.js or Google Charts
         </p>
       </article>
 
-      <article class="subarticle-effect" aria-labelledby="chart-effect">
+      <article class="article3" aria-labelledby="chart-effect">
         <h3 id="chart-effect">Effect on the reader</h3>
         <p>
           Charts make trends and outliers visible at a glance, making quick season-to-season comparisons possible and providing faster insight than just the raw numbers.
